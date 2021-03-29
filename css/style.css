@@ -272,6 +272,124 @@ body {
   stroke: var(--sfg);
 }
 
+.nestedContent {
+  grid-row: 2 / span 2;
+  grid-column: 3 / span 2;
+  height: 120%;
+  margin-top: -5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selector {
+  display: flex;
+  justify-content: space-around;
+}
+
+.selector .logo img{
+  width: 30px;
+}
+
+.sub {
+  background-color: var(--sbg);
+  border: none;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 30px;
+}
+
+.sub:hover {
+  cursor: pointer;
+}
+
+.selector .selected {
+  background-color: var(--accent);
+}
+
+.nestedContent hr {
+  border: none;
+  border-bottom: 1px solid var(--fg);
+  margin-bottom: 10px;
+}
+
+.posts {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  /* Hide scrollbar for IE, Edge, Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chromium and Safari */
+.posts::-webkit-scrollbar {
+  display: none;
+}
+
+.post {
+  border: 1px solid var(--fg);
+  border-radius: 5px;
+  font-size: var(--fsp);
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+
+.postContainer {
+  /* display: flex; */
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+.postThumbContainer {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.postTitle {
+  font-size: calc(var(--fsp) + 2px);
+}
+
+.postThumb {
+  height: 75px;
+}
+
+.postLink {
+  grid-row: 1;
+  grid-column: 2 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postLink:link,
+.postLink:visited {
+  text-decoration: none;
+}
+
+.postLink:link {
+  color: var(--accent);
+}
+
+.postLink:link:hover,
+.postLink:visited:hover {
+  text-decoration: underline;
+}
+
+.postInfo {
+  grid-row: 2;
+  grid-column: 2 / span 4;
+  color: var(--fg);
+}
+
 .list {
   display: flex;
   align-items: center;
@@ -327,7 +445,7 @@ body {
     justify-content: flex-start;
   }
 
-  .dateBlock {
+  .dateBlock, .nestedContent {
     display: none;
   }
 

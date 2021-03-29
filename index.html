@@ -100,6 +100,38 @@
           <i class="buttonLink__icon" data-feather="calendar"></i>
         </a>
       </div>
+
+      <!-- Nested Content  -->
+
+      <div class="nestedContent">
+        <template class="postTmpl">
+          <li class="post">
+            <div class="postContainer">
+              <a class="postLink" target="_blank">
+                <h4 class="postTitle"></h4>
+              </a>
+              <div class="postThumbContainer">
+                <img class="postThumb" />
+              </div>
+              <div class="postInfo">
+                <span class="postAuthor"></span> • <span class="postDate"></span>
+                <br />
+                <span class="postVotes"></span> • <span class="postComments"></span>
+              </div>
+            </div>
+          </li>
+        </template>
+        <div class="selector">
+          <div class="logo"><img src="img/reddit-logo-16.png" /></div>
+          <div class="sub selected" name="MechanicalKeyboards"
+            onclick="selectSub(this)">r/mk</div>
+          <div class="sub" name="ErgoMechKeyboards"
+            onclick="selectSub(this)">Ergo</div>
+          <div class="sub" name="unixporn" onclick="selectSub(this)">Unix</div>
+        </div>
+        <hr>
+        <ul class="posts"></ul>
+      </div>
     </div>
 
     <!-- Scrips  -->
@@ -111,6 +143,7 @@
     <script>
       feather.replace();
     </script>
+    <script src="js/reddit.js"></script>
   </body>
 
   <!-- Coded and designed by Miguel R. Ávila: https://github.com/MiguelRAvila -->
