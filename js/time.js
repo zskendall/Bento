@@ -1,18 +1,18 @@
 window.onload = displayClock();
 function displayClock() {
   const monthNames = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
+    'January',
+    'February',
+    'March',
+    'April',
     'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ];
 
   // Set to true to use a 12 hour date format
@@ -22,7 +22,7 @@ function displayClock() {
   var mm = monthNames[d.getMonth()];
   var dd = d.getDate();
   var min = (mins = ('0' + d.getMinutes()).slice(-2));
-  var hh = d.getHours();
+  var hh = ('0' + d.getHours()).slice(-2);
   var ampm = '';
 
   if (format_12hour) {
