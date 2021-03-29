@@ -142,6 +142,7 @@ body {
   color: var(--fg);
 }
 
+#wkd,
 #month,
 #day {
   font-size: var(--fsm);
