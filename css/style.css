@@ -5,7 +5,7 @@
 :root {
   /* Fonts  */
   --fsg: 135px; /* Time and Greetings */
-  --fsm: 75px; /* Date */
+  --fsm: 50px; /* Date */
   --fss: 25px; /* Greetings and Weather widger */
   --fses: 16px; /* Links List */
 
@@ -79,6 +79,31 @@ body {
   height: 25px;
 }
 
+.weatherBlock {
+  display: flex;
+  position: absolute;
+  margin: 2em 0 0 2em;
+  left: 0;
+  top: 0;
+  color: var(--fg);
+  border: none;
+  background-color: #00000000;
+}
+
+.weather-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.temperature-value p {
+  /* font-size: var(--fss); */
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 15px;
+  /* color: var(--fg); */
+  color: #9c9c9c;
+}
+
 .container {
   width: 145vh;
   height: 85vh;
@@ -108,21 +133,9 @@ body {
   justify-content: center;
 }
 
-.weatherBlock {
+.dateBlock {
   grid-column: 3 / span 2;
-  grid-row: 1 / span 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.weatherBlock__date {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-}
-.weatherBlock__weather {
+  grid-row: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,30 +163,13 @@ body {
   color: var(--fg);
 }
 
+#month,
 #day {
   margin-left: 20px;
 }
 
 #greetings {
   font-size: var(--fss);
-  color: var(--fg);
-}
-
-.weather-icon img {
-  width: 70px;
-  height: 70px;
-}
-
-.temperature-value p {
-  font-size: var(--fss);
-  font-weight: bolder;
-  margin-left: 15px;
-  color: var(--fg);
-}
-
-.temperature-description p {
-  font-size: var(--fss);
-  margin-left: 15px;
   color: var(--fg);
 }
 
