@@ -63,6 +63,10 @@ body {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 #themeButton {
   position: absolute;
   margin: 2em 2em 0 0;
@@ -286,31 +290,63 @@ body {
   flex-direction: column;
 }
 
-.selector {
-  display: flex;
+.contentControls {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  /* display: inline; */
+  /* display:block; */
   justify-content: space-around;
 }
 
-.selector .logo img{
+.subSelector {
+  grid-column: 2 / span 9;
+  display: flex;
+  align-items:center;
+  /* justify-content: space-around; */
+  overflow-x: auto;
+  /* Hide scrollbar for IE, Edge, Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chromium and Safari */
+.subSelector::-webkit-scrollbar {
+  display: none;
+}
+
+.redditLogo {
+  margin: 0 5px;
+}
+
+.redditLogo img{
+  float: left;
   width: 30px;
 }
 
+.subSeparator {
+  border-right: 1px solid var(--fg);
+  height: 70%;
+}
+
 .sub {
-  background-color: var(--sbg);
   border: none;
   border-radius: 10px 10px 0 0;
+  height: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5px 30px;
+  margin: 0 1px;
 }
 
 .sub:hover {
   cursor: pointer;
 }
 
-.selector .selected {
+.sub.selected {
   background-color: var(--accent);
+  border: none;
   color: var(--sfg);
 }
 

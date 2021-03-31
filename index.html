@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
 
   <body class="">
@@ -50,7 +52,8 @@
           <button type="submit" class="searchButton" id="searchButton">
             <i class="buttonLink__icon" data-feather="search"></i>
           </button>
-          <input type="search" id="search" placeholder="Search" autocomplete="off" name="q" autofocus />
+          <input type="search" id="search" placeholder="Search"
+            autocomplete="off" name="q" autofocus />
         </form>
       </div>
 
@@ -121,13 +124,21 @@
             </div>
           </li>
         </template>
-        <div class="selector">
-          <div class="logo"><img src="img/reddit-logo-16.png" /></div>
-          <div class="sub selected" name="MechanicalKeyboards"
-            onclick="selectSub(this)">r/mk</div>
-          <div class="sub" name="ErgoMechKeyboards"
-            onclick="selectSub(this)">Ergo</div>
-          <div class="sub" name="unixporn" onclick="selectSub(this)">Unix</div>
+        <div class="contentControls">
+          <div class="redditLogo"><img src="img/reddit-logo-16.png" /></div>
+          <div class="subSelector">
+            <div class="sub selected" name="MechanicalKeyboards"
+              onclick="selectSub(this)">
+              <span class="material-icons">keyboard</span>
+            </div>
+            <div class="subSeparator hidden"></div>
+            <div class="sub" name="ErgoMechKeyboards"
+              onclick="selectSub(this)">EMK</div>
+            <div class="subSeparator"></div>
+            <div class="sub" name="unixporn" onclick="selectSub(this)">
+              <span class="material-icons">tune</span>
+            </div>
+          </div>
         </div>
         <hr>
         <ul class="posts"></ul>
