@@ -57,5 +57,16 @@ function selectSub(el) {
     selected.classList.remove('selected');
     el.classList.add('selected');
     getPosts(el.getAttribute('name'));
+    for (const sep of el.parentNode.querySelectorAll('.subSeparator')) {
+      sep.classList.remove('hidden');
+    }
+    const prevSep = el.previousElementSibling;
+    if (prevSep) {
+      prevSep.classList.add('hidden');
+    }
+    const nextSep = el.nextElementSibling;
+    if (nextSep) {
+      nextSep.classList.add('hidden');
+    }
   }
 }
