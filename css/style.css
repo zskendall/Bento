@@ -202,6 +202,11 @@ body {
   outline: none;
 }
 
+#search::-webkit-search-cancel-button {
+  position: relative;
+  right: 10px;
+}
+
 .searchButton {
   background: var(--accent);
   border: none;
@@ -306,6 +311,7 @@ body {
 
 .selector .selected {
   background-color: var(--accent);
+  color: var(--sfg);
 }
 
 .nestedContent hr {
