@@ -8,6 +8,7 @@
   --fsm: 45px; /* Date */
   --fss: 25px; /* Greetings and Weather widger */
   --fses: 16px; /* Links List */
+  --fsp: 14px; /* Reddit feed posts */
 
   /* Dark theme  */
   --accent: #004882; /* Hover color */
@@ -367,7 +368,7 @@ body {
   stroke: var(--sfg);
 }
 
-.nestedContent {
+.nested-content {
   grid-row: 2 / span 2;
   grid-column: 3 / span 2;
   height: 120%;
@@ -376,7 +377,7 @@ body {
   flex-direction: column;
 }
 
-.contentControls {
+.content-controls {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(10, 1fr);
@@ -385,7 +386,7 @@ body {
   justify-content: space-around;
 }
 
-.subSelector {
+.sub-selector {
   grid-column: 2 / span 9;
   display: flex;
   align-items:center;
@@ -397,20 +398,20 @@ body {
 }
 
 /* Hide scrollbar for Chromium and Safari */
-.subSelector::-webkit-scrollbar {
+.sub-selector::-webkit-scrollbar {
   display: none;
 }
 
-.redditLogo {
+.reddit-logo {
   margin: 0 5px;
 }
 
-.redditLogo img{
+.reddit-logo img{
   float: left;
   width: 30px;
 }
 
-.subSeparator {
+.sub-separator {
   border-right: 1px solid var(--fg);
   height: 70%;
 }
@@ -436,7 +437,7 @@ body {
   color: var(--sfg);
 }
 
-.nestedContent hr {
+.nested-content hr {
   border: none;
   border-bottom: 1px solid var(--fg);
   margin-bottom: 10px;
@@ -465,15 +466,14 @@ body {
   padding: 5px 10px;
 }
 
-.postContainer {
-  /* display: flex; */
+.post-container {
   display:grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 5px;
 }
 
-.postThumbContainer {
+.post-thumb-container {
   grid-row: 1 / span 2;
   grid-column: 1;
   display: flex;
@@ -482,15 +482,15 @@ body {
   margin-right: 5px;
 }
 
-.postTitle {
+.post-title {
   font-size: calc(var(--fsp) + 2px);
 }
 
-.postThumb {
+.post-thumb {
   height: 75px;
 }
 
-.postLink {
+.post-link {
   grid-row: 1;
   grid-column: 2 / span 4;
   display: flex;
@@ -498,25 +498,25 @@ body {
   justify-content: center;
 }
 
-.postLink:link,
-.postLink:visited {
+.post-link:link,
+.post-link:visited {
   text-decoration: none;
 }
 
-.postLink:link {
+.post-link:link {
   color: var(--accent);
 }
 
-.postLink:link:hover,
-.postLink:visited:hover {
+.post-link:link:hover,
+.post-link:visited:hover {
   text-decoration: underline;
 }
 
-.postInfo {
+.post-info {
   grid-row: 2;
   grid-column: 2 / span 4;
   color: var(--fg);
-  font-size: calc(var(--fses) - 2px);
+  font-size: var(--fsp);
 }
 
 .list {
