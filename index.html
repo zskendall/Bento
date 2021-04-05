@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Bento</title>
+    <title>New Tab</title>
     <link rel=" shortcut icon" type="image/png" href="icons/favicon.png" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -145,8 +145,42 @@
       </div>
     </div>
 
+    <!-- Modal   -->
+
+    <div class="modal hidden">
+      <template class="weather">
+        <center><h4></h4></center>
+        <form class="modal-form" id="weather-form"
+              onsubmit="return saveWeatherState(this)">
+          <div class="key-input">
+            <input type="text" class="form-control" id="weatherkey"
+                   placeholder="key" autocomplete="off" name="weatherkey"/>
+            <sup class="required hidden" id="weatherkey-req">*</sup>
+          </div>
+          <div class="lat-input">
+            <input type="text" class="form-control" id="lat" placeholder="lat"
+                   autocomplete="off" name="lat"/>
+            <sup class="required hidden" id="lat-req">*</sup>
+          </div>
+          <div class="lng-input">
+            <input type="text" class="form-control" id="lng" placeholder="lng"
+                   autocomplete="off" name="lng"/>
+            <sup class="required hidden" id="lng-req">*</sup>
+          </div>
+          <button type="submit">
+            <span class="material-icons">save</span>
+          </button>
+        </form>
+      </template>
+      <div class="modal-container">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+
     <!-- Scrips  -->
 
+    <script src="js/common.js"></script>
     <script src="js/time.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/greeting.js"></script>

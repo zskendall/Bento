@@ -19,3 +19,4 @@ src="https://github.com/zskendall/Bento/blob/master/assets/preview_customized.pn
   * Optimized to use with Chromium force-dark
   * Default is dark(er) theme
 * Added **[Material Icons](https://material.io/resources/icons/)**
+* **Weather** using localStorage instead of hard-coding
