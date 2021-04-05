@@ -574,7 +574,7 @@ body {
     justify-content: flex-start;
   }
 
-  .dateBlock, .nestedContent {
+  .dateBlock, .nested-content {
     display: none;
   }
 
